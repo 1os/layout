@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Тест верстки</title>
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2016.1.112/styles/kendo.common-fiori.min.css"/>
+    <link rel="stylesheet" href="http://cdn.kendostatic.com/2016.1.112/styles/kendo.fiori.min.css"/>
     <style>
         body {
             margin: 0px;
@@ -112,11 +114,48 @@
             bottom: -88%;
             left: 1468px;
         }
+
+        .fieldlist {
+            margin: 0 0 -2em;
+            padding: 0;
+        }
+
+        .fieldlist li {
+            list-style: none;
+            padding-bottom: 2em;
+        }
+
+        .fieldlist label {
+            display: block;
+            padding-bottom: 1em;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 12px;
+            color: #444;
+        }
+        .url{
+            zoom: 3;
+            width: 400px;
+            margin-left: 74%;
+            margin-top: 5px;
+        }
+
     </style>
     <script src="http://cdn.kendostatic.com/2016.1.112/js/jquery.min.js"></script>
     <script src="http://cdn.kendostatic.com/2016.1.112/js/kendo.all.min.js"></script>
 </head>
 <body>
+<form class="url" action="" method="GET">
+    <ul class="fieldlist">
+        <li>
+            <label for="icon-right">Enter site url</label>
+                <span class="k-textbox k-space-right" style="width: 100%;">
+                    <input type="url" id="icon-right" name="url"/>
+                    <button type="submit" class="k-icon k-i-search">&nbsp;</button>
+                </span>
+        </li>
+    </ul>
+</form>
 <div class="desktop-wrap">
     <iframe class="desktop"></iframe>
 </div>
