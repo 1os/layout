@@ -151,7 +151,7 @@
             <label for="icon-right">Enter site url</label>
                 <span class="k-textbox k-space-right" style="width: 100%;">
                     <input type="url" id="icon-right" name="url" placeholder="http://1os.su/"/>
-                    <button type="submit" class="k-icon k-i-search">&nbsp;</button>
+                    <button type="submit" class="k-icon k-i-search" style="margin: -8px 6px 0;">&nbsp;</button>
                 </span>
         </li>
     </ul>
@@ -174,13 +174,14 @@
     }
 
     $(document).ready(function () {
+        $("#icon-right").val( getParameterByName("url"));
         $(".mobile").attr("src", getParameterByName("url"));
         $(".tablet").attr("src", getParameterByName("url"));
         $(".desktop").attr("src", getParameterByName("url"));
         $("#qrUrl").kendoQRCode({
             value: getParameterByName("url"),
             errorCorrection: "M",
-            size: 120,
+            size: 200,
             border: {
                 color: "#000000",
                 width: 5
